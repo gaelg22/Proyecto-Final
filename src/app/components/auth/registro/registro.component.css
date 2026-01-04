@@ -1,0 +1,13 @@
+.login-page {
+  min-height: 100vh;
+  background-color: #e9ecef;
+}
+
+.login-box {
+  width: 360px;
+  border-radius: 4px;
+}
+
+.input-group-text {
+  background-color: #f4f6f9;
+}

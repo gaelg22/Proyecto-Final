@@ -1,0 +1,91 @@
+<div class="container-fluid mt-4">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="card card-primary">
+
+        <!-- Header -->
+        <div class="card-header">
+          <h3 class="card-title">Eliminar Jugador</h3>
+        </div>
+
+        <!-- Form -->
+        <form>
+
+          <div class="card-body">
+
+            <!-- Nombre -->
+            <div class="form-group mb-3">
+              <label>Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="jugador.nombre"
+                id="nombre"
+                name="nombre"
+                placeholder="Ingrese el nombre">
+                <div id="nombreHelp" class="form-text">
+                No debe quedar el campo vacio.
+      </div>
+            </div>
+
+            <!-- Ciudad -->
+            <div class="form-group mb-3">
+              <label>Pocision</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="jugador.pocision"
+                id="pocision"
+                name="pocision"
+                placeholder="Ingrese la posicion"> 
+            </div>
+
+            <!-- Numero --> 
+            <div class="form-group mb-3">
+              <label>Numero</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="jugador.numero"
+                id="numero"
+                name="numero"
+                placeholder="Ingrese el numero">
+            </div>
+
+            <!-- Equipo -->
+            <div class="form-group mb-3">
+              <label>Id Equipo</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="jugador.equipoId"
+                id="equipoId"
+                name="equipoId"
+                placeholder="Ingrese el ID del equipo">
+            </div>
+
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary"
+              (click)="eliminar()">
+              Eliminar
+            </button>
+
+            <button type="button" class="btn btn-secondary ms-2"
+              routerLink="/jugadores">
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,81 @@
+<div class="container-fluid mt-4">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="card card-primary">
+
+        <!-- Header -->
+        <div class="card-header">
+          <h3 class="card-title">Agregar Liga</h3>
+        </div>
+
+        <!-- Form -->
+        <form>
+
+          <div class="card-body">
+
+            <!-- Nombre -->
+            <div class="form-group mb-3">
+              <label>Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="liga.nombre"
+                id="nombre"
+                name="nombre"
+                placeholder="Ingrese el nombre">
+
+                <div id="nombreHelp" class="form-text">
+                  No debe quedar el campo vacio.
+                </div>
+            </div>
+
+            <!-- Pais -->
+            <div class="form-group mb-3">
+              <label>Pais</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="liga.pais"
+                id="pais"
+                name="pais"
+                placeholder="Ingrese el pais">
+            </div>
+
+            <!-- Temporada Actual -->
+            <div class="form-group mb-3">
+              <label>Temporada Actual</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="liga.temporadaActual"
+                id="temporadaActual"
+                name="temporadaActual"
+                placeholder="Ingrese la temporada actual">
+            </div>
+
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary"
+              (click)="guardar()">  
+              Guardar
+            </button>
+
+            <button type="button" class="btn btn-secondary ms-2"
+            routerLink="/entrenadores">
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="login-page d-flex align-items-center justify-content-center">
+  <div class="login-box card shadow-sm p-4">
+
+    <h2 class="text-center mb-3">
+      <b>Registro de usuario</b>
+    </h2>
+
+    <p class="text-center text-muted mb-4">
+      Ingresa tus datos
+    </p>
+
+    <form (ngSubmit)="registro()">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      [(ngModel)]="usuario.username"
+      class="form-control"
+      name="username"
+      placeholder="Username"
+      required
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="password"
+      [(ngModel)]="usuario.password"
+      class="form-control"
+      name="password"
+      placeholder="Password"
+      required
+    />
+  </div>
+
+  <button class="btn btn-primary px-4 w-100" type="submit">
+    Registrarse
+  </button>
+</form>
+

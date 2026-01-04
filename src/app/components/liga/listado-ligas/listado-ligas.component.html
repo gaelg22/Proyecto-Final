@@ -1,0 +1,57 @@
+<div class="container-fluid mt-4">
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Header -->
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h3 class="card-title mb-0">Listado de Ligas</h3>
+
+      <button
+          class="btn btn-primary btn-sm" 
+          routerLink="/agregar-liga">
+          <i class="fas fa-plus"></i> Agregar
+      </button>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-bordered table-striped text-nowrap">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Pais</th>
+            <th>Temporada Actual</th>
+            <th style="width: 130px">Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            @for (liga of ligas; track liga.id) {
+            <tr>
+              <th scope="row">{{ liga.id }}</th>
+              <td>{{ liga.nombre }}</td>
+              <td>{{ liga.pais }}</td>
+              <td>{{ liga.temporadaActual }}</td>
+
+            
+
+            <!-- Acciones -->
+            <td class="text-center">
+              <button class="btn btn-warning btn-sm me-1" [routerLink]="['/actualizar-liga',liga.id]">
+                <i class="fas fa-edit"></i>
+              </button>
+
+              <button class="btn btn-danger btn-sm" [routerLink]="['/eliminar-liga',liga.id]">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

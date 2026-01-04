@@ -1,0 +1,94 @@
+<div class="container-fluid mt-4">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="card card-primary">
+
+        <!-- Header -->
+        <div class="card-header">
+          <h3 class="card-title">Agregar Entrenador</h3>
+        </div>
+
+        <!-- Form -->
+        <form>
+
+          <div class="card-body">
+
+            <!-- Nombre -->
+            <div class="form-group mb-3">
+              <label>Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="entrenador.nombre"
+                id="nombre"
+                name="nombre"
+                aria-describedby="nombreHelp"
+                placeholder="Ingrese el nombre">
+
+                <div id="nombreHelp" class="form-text">
+                  No debe quedar el campo vacio.
+              </div>
+            </div>
+
+            <!-- Experiencia -->
+            <div class="form-group mb-3">
+              <label>Experiencia (años)</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="entrenador.experiencia"
+                id="experiencia"
+                name="experiencia"
+                placeholder="Ingrese los años de experiencia">
+            </div>
+
+            <!-- Nacionalidad -->
+            <div class="form-group mb-3">
+              <label>Nacionalidad</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="entrenador.nacionalidad"
+                id="nacionalidad"
+                name="nacionalidad"
+                placeholder="Ingrese la nacionalidad">
+            </div>
+
+            <!-- Equipo -->
+            <div class="form-group mb-3">
+              <label>Id Equipo</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="entrenador.equipoId"
+                id="equipoId"
+                name="equipoId"
+                placeholder="Ingrese el ID del equipo">
+            </div>
+
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary"
+            (click)="guardar()">
+              Guardar
+            </button>
+
+            <button type="button" class="btn btn-secondary ms-2"
+              routerLink="/entrenadores" >
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

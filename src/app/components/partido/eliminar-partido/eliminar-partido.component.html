@@ -1,0 +1,113 @@
+<div class="container-fluid mt-4">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="card card-primary">
+
+        <!-- Header -->
+        <div class="card-header">
+          <h3 class="card-title">Eliminar Partido</h3>
+        </div>
+
+        <!-- Form -->
+        <form>
+
+          <div class="card-body">
+
+            <!-- Fecha -->
+            <div class="form-group mb-3">
+              <label>Fecha</label>
+              <input
+                type="date"
+                class="form-control"
+                [(ngModel)]="partido.fecha"
+                id="fecha"
+                name="fecha"
+                placeholder="Ingrese la fecha">
+            </div>
+
+            <!-- Goles Local -->
+            <div class="form-group mb-3">
+              <label>Goles Local</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="partido.golesLocal"
+                id="golesLocal"
+                name="golesLocal"
+                placeholder="Ingrese los goles del equipo local">
+            </div>
+
+            <!-- Goles Visitante -->
+            <div class="form-group mb-3">
+              <label>Goles Visitante</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="partido.golesVisitante"
+                id="golesVisitante"
+                name="golesVisitante"
+                placeholder="Ingrese los goles del equipo visitante">
+            </div>
+
+            <!-- Id Equipo Local -->
+            <div class="form-group mb-3">
+              <label>Id Equipo Local</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="partido.equipoLocalId"
+                id="equipoLocalId"
+                name="equipoLocalId"
+                placeholder="Ingrese el Id del equipo local">
+            </div>
+
+            <!-- Id Equipo Visitante -->
+            <div class="form-group mb-3">
+              <label>Id Equipo Visitante</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="partido.equipoVisitanteId"
+                id="equipoVisitanteId"
+                name="equipoVisitanteId"
+                placeholder="Ingrese el Id del equipo visitante">
+            </div>
+
+            <!-- Id Liga -->
+            <div class="form-group mb-3">
+              <label>Id Liga</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="partido.ligaId"
+                id="ligaId"
+                name="ligaId"
+                placeholder="Ingrese el Id de la liga">
+            </div>
+
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary"
+            (click)="eliminar()">
+              Eliminar
+            </button>
+
+            <button type="button" class="btn btn-secondary ms-2"
+            routerLink="/partidos">
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

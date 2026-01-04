@@ -1,0 +1,57 @@
+<div class="container-fluid mt-4">
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Header -->
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h3 class="card-title mb-0">Listado de Jugadores</h3>
+
+      <button
+          class="btn btn-primary btn-sm" 
+          routerLink="/agregar-jugador">
+          <i class="fas fa-plus"></i> Agregar
+      </button>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-bordered table-striped text-nowrap">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Pocision</th>
+            <th>Numero</th>
+            <th>Equipo</th>
+            <th style="width: 130px">Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (jugador of jugadores; track jugador.id) {
+            <tr>
+              <th scope="row">{{ jugador.id }}</th>
+              <td>{{ jugador.nombre }}</td>
+              <td>{{ jugador.pocision }}</td>
+              <td>{{ jugador.numero }}</td>
+              <td>{{ jugador.equipoId }}</td>
+            
+            <!-- Acciones -->
+            <td class="text-center">
+              <button class="btn btn-warning btn-sm me-1" [routerLink]="['/actualizar-jugador',jugador.id]">
+                <i class="fas fa-edit"></i>
+              </button>
+
+              <button class="btn btn-danger btn-sm" [routerLink]="['/eliminar-jugador',jugador.id]">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
