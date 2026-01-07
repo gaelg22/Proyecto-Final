@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class EntrenadorService {
 
-  private apiUrl = 'https://ligas-deportivas.onrender.com';
+  //PONER TU API
+  private apiUrl = 'https://ejercicio-10-nt69.onrender.com';
 
   constructor(
     private http: HttpClient,

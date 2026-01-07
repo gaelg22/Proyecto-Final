@@ -1,93 +1,90 @@
 <div class="container-fluid mt-4">
-
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md-6">
 
-      <div class="card card-primary">
+      <div class="card shadow-sm rounded-3 border-0">
 
         <!-- Header -->
-        <div class="card-header">
-          <h3 class="card-title">Actualizar Entrenador</h3>
+        <div class="card-header bg-primary text-white text-center rounded-top">
+          <h5 class="mb-0 fw-semibold">Actualizar Entrenador</h5>
         </div>
 
         <!-- Form -->
         <form>
-
-          <div class="card-body">
+          <div class="card-body px-4 py-3">
 
             <!-- Nombre -->
-            <div class="form-group mb-3">
-              <label>Nombre</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Nombre</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="entrenador.nombre"
                 id="nombre"
                 name="nombre"
-                aria-describedby="nombreHelp"
-                placeholder="Ingrese el nombre">
+                aria-describedby="nombreHelp">
 
-                <div id="nombreHelp" class="form-text">
-                  No debe quedar el campo vacio.
+              <div id="nombreHelp" class="form-text">
+                No debe quedar el campo vacío.
               </div>
             </div>
 
             <!-- Experiencia -->
-            <div class="form-group mb-3">
-              <label>Experiencia (años)</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Experiencia (años)</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="entrenador.experiencia"
                 id="experiencia"
-                name="experiencia"
-                placeholder="Ingrese los años de experiencia">
+                name="experiencia">
             </div>
 
             <!-- Nacionalidad -->
-            <div class="form-group mb-3">
-              <label>Nacionalidad</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Nacionalidad</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="entrenador.nacionalidad"
                 id="nacionalidad"
-                name="nacionalidad"
-                placeholder="Ingrese la nacionalidad">
+                name="nacionalidad">
             </div>
 
             <!-- Equipo -->
-            <div class="form-group mb-3">
-              <label>Id Equipo</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Id Equipo</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="entrenador.equipoId"
                 id="equipoId"
-                name="equipoId"
-                placeholder="Ingrese el ID del equipo">
+                name="equipoId">
             </div>
 
           </div>
 
           <!-- Footer -->
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary"
-                (click)="actualizar()">
-                Guardar
+          <div class="card-footer bg-light d-flex justify-content-end gap-2 rounded-bottom">
+            <button
+              type="submit"
+              class="btn btn-primary btn-sm px-4"
+              (click)="actualizar()">
+              Guardar
             </button>
 
-            <button type="button" class="btn btn-secondary ms-2"
-              RouterLink="/entrenadores" routerLinkActive="active">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm px-4"
+              routerLink="/entrenadores">
               Cancelar
             </button>
           </div>
 
         </form>
 
-    </div>
+      </div>
 
     </div>
   </div>
-
 </div>

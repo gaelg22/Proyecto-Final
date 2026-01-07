@@ -9,7 +9,8 @@ import { AuthService } from './auth.service';
 })
 export class LigaService {
 
-  private apiUrl = "https://ligas-deportivas.onrender.com";
+  //PONER TU API
+  private apiUrl = "https://ejercicio-10-nt69.onrender.com";
 
   constructor(
     private http: HttpClient,

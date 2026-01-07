@@ -1,54 +1,58 @@
-<div class="container-fluid mt-4">
+<div class="container-fluid mt-4 jugadores-container">
 
-  <!-- Card -->
-  <div class="card">
+  <div class="jugadores-card">
 
     <!-- Header -->
-    <div class="card-header d-flex justify-content-between align-items-center">
-      <h3 class="card-title mb-0">Listado de Jugadores</h3>
+    <div class="jugadores-header">
+      <h3>Listado de Jugadores</h3>
 
       <button
-          class="btn btn-primary btn-sm" 
-          routerLink="/agregar-jugador">
-          <i class="fas fa-plus"></i> Agregar
+        class="btn-add"
+        routerLink="/agregar-jugador">
+        <i class="fa fa-plus"></i>
+        Agregar
       </button>
     </div>
 
-    <!-- Body -->
-    <div class="card-body table-responsive p-0">
-      <table class="table table-bordered table-striped text-nowrap">
+    <!-- Tabla -->
+    <div class="jugadores-table">
+      <table>
         <thead>
           <tr>
             <th>Id</th>
             <th>Nombre</th>
-            <th>Pocision</th>
-            <th>Numero</th>
+            <th>Posición</th>
+            <th>Número</th>
             <th>Equipo</th>
-            <th style="width: 130px">Acciones</th>
+            <th>Acciones</th>
           </tr>
         </thead>
 
         <tbody>
           @for (jugador of jugadores; track jugador.id) {
             <tr>
-              <th scope="row">{{ jugador.id }}</th>
+              <td>{{ jugador.id }}</td>
               <td>{{ jugador.nombre }}</td>
               <td>{{ jugador.pocision }}</td>
               <td>{{ jugador.numero }}</td>
               <td>{{ jugador.equipoId }}</td>
-            
-            <!-- Acciones -->
-            <td class="text-center">
-              <button class="btn btn-warning btn-sm me-1" [routerLink]="['/actualizar-jugador',jugador.id]">
-                <i class="fas fa-edit"></i>
-              </button>
 
-              <button class="btn btn-danger btn-sm" [routerLink]="['/eliminar-jugador',jugador.id]">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        }
+              <!-- Acciones -->
+              <td class="jugadores-actions">
+                <button
+                  class="btn-edit"
+                  [routerLink]="['/actualizar-jugador', jugador.id]">
+                  <i class="fa fa-edit"></i>
+                </button>
+
+                <button
+                  class="btn-delete"
+                  [routerLink]="['/eliminar-jugador', jugador.id]">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          }
         </tbody>
       </table>
     </div>

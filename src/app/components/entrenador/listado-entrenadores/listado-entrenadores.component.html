@@ -1,50 +1,54 @@
+<div class="container-fluid mt-4 entrenadores-container">
 
-<div class="container-fluid mt-4">
-
-  <!-- Card -->
-  <div class="card">
+  <div class="entrenadores-card">
 
     <!-- Header -->
-    <div class="card-header d-flex justify-content-between align-items-center">
-      <h3 class="card-title mb-0">Listado de Entrenadores</h3>
+    <div class="entrenadores-header">
+      <h3>Listado de Entrenadores</h3>
 
       <button
-          class="btn btn-primary btn-sm" 
-          routerLink="/agregar-entrenador">
-          <i class="fas fa-plus"></i> Agregar
+        class="btn-add"
+        routerLink="/agregar-entrenador">
+        <i class="fa fa-plus"></i>
+        Agregar
       </button>
-
     </div>
 
-    <!-- Body -->
-    <div class="card-body table-responsive p-0">
-      <table class="table table-bordered table-striped text-nowrap">
+    <!-- Tabla -->
+    <div class="entrenadores-table">
+      <table>
         <thead>
           <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Experiencia</th>
             <th>Nacionalidad</th>
             <th>Equipo</th>
-            <th style="width: 130px">Acciones</th>
+            <th>Acciones</th>
           </tr>
         </thead>
 
         <tbody>
           @for (entrenador of entrenadores; track entrenador.id) {
             <tr>
-              <th scope="row">{{ entrenador.id }}</th>
+              <td>{{ entrenador.id }}</td>
               <td>{{ entrenador.nombre }}</td>
               <td>{{ entrenador.experiencia }}</td>
               <td>{{ entrenador.nacionalidad }}</td>
               <td>{{ entrenador.equipoId }}</td>
+
               <!-- Acciones -->
-              <td class="text-center">
-                <button class="btn btn-warning btn-sm me-1"[routerLink]="['/actualizar-entrenador', entrenador.id]">
-                  <i class="fas fa-edit"></i>
+              <td class="entrenadores-actions">
+                <button
+                  class="btn-edit"
+                  [routerLink]="['/actualizar-entrenador', entrenador.id]">
+                  <i class="fa fa-edit"></i>
                 </button>
-                <button class="btn btn-danger btn-sm" [routerLink]="['/eliminar-entrenador',entrenador.id]">
-                  <i class="fas fa-trash"></i>
+
+                <button
+                  class="btn-delete"
+                  [routerLink]="['/eliminar-entrenador', entrenador.id]">
+                  <i class="fa fa-trash"></i>
                 </button>
               </td>
             </tr>
@@ -55,4 +59,3 @@
 
   </div>
 </div>
-

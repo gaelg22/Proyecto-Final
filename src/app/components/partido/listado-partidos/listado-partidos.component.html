@@ -1,22 +1,22 @@
-<div class="container-fluid mt-4">
+<div class="container-fluid mt-4 partidos-container">
 
-  <!-- Card -->
-  <div class="card">
+  <div class="partidos-card">
 
     <!-- Header -->
-    <div class="card-header d-flex justify-content-between align-items-center">
-      <h3 class="card-title mb-0">Listado de Partidos</h3>
+    <div class="partidos-header">
+      <h3>Listado de Partidos</h3>
 
       <button
-          class="btn btn-primary btn-sm" 
-          routerLink="/agregar-partido">
-          <i class="fas fa-plus"></i> Agregar
+        class="btn-add"
+        routerLink="/agregar-partido">
+        <i class="fa fa-plus"></i>
+        Agregar
       </button>
     </div>
 
-    <!-- Body -->
-    <div class="card-body table-responsive p-0">
-      <table class="table table-bordered table-striped text-nowrap">
+    <!-- Tabla -->
+    <div class="partidos-table">
+      <table>
         <thead>
           <tr>
             <th>Id</th>
@@ -26,33 +26,37 @@
             <th>Equipo Local</th>
             <th>Equipo Visitante</th>
             <th>Liga</th>
-            <th style="width: 130px">Acciones</th>
+            <th>Acciones</th>
           </tr>
         </thead>
 
         <tbody>
           @for (partido of partidos; track partido.id) {
             <tr>
-              <th scope="row">{{ partido.id }}</th>
+              <td>{{ partido.id }}</td>
               <td>{{ partido.fecha }}</td>
               <td>{{ partido.golesLocal }}</td>
               <td>{{ partido.golesVisitante }}</td>
               <td>{{ partido.equipoLocalId }}</td>
               <td>{{ partido.equipoVisitanteId }}</td>
               <td>{{ partido.ligaId }}</td>
-            
-            <!-- Acciones -->
-            <td class="text-center">
-              <button class="btn btn-warning btn-sm me-1" [routerLink]="['/actualizar-partido',partido.id]">
-                <i class="fas fa-edit"></i>
-              </button>
 
-              <button class="btn btn-danger btn-sm" [routerLink]="['/eliminar-partido',partido.id]">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        }
+              <!-- Acciones -->
+              <td class="partidos-actions">
+                <button
+                  class="btn-edit"
+                  [routerLink]="['/actualizar-partido', partido.id]">
+                  <i class="fa fa-edit"></i>
+                </button>
+
+                <button
+                  class="btn-delete"
+                  [routerLink]="['/eliminar-partido', partido.id]">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          }
         </tbody>
       </table>
     </div>

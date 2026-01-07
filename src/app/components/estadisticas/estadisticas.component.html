@@ -1,25 +1,30 @@
-<div class="row">
+<div class="row stats-layout">
 
   <div class="col-md-6 mb-4">
-    <div class="card">
-      <h5> Equipos con más partidos ganados</h5>
-      <canvas id="ganadosChart"></canvas>
+    <div class="stats-card blue">
+      <h5 class="stats-title">Equipos con más partidos ganados</h5>
+      <div class="chart-container horizontal">
+        <canvas id="ganadosChart"></canvas>
+      </div>
     </div>
   </div>
 
   <div class="col-md-6 mb-4">
-    <div class="card">
-      <h5> Equipos por Liga</h5>
-      <canvas id="equiposLigaChart"></canvas>
+    <div class="stats-card purple">
+      <h5 class="stats-title">Equipos por Liga</h5>
+      <div class="chart-container donut">
+        <canvas id="equiposLigaChart"></canvas>
+      </div>
     </div>
   </div>
 
-  <div class="col-md-12">
-    <div class="card">
-      <h5> Promedio de jugadores por equipo</h5>
-      <canvas id="jugadoresChart"></canvas>
+  <div class="col-md-12 mb-4">
+    <div class="stats-card green">
+      <h5 class="stats-title">Promedio de jugadores por equipo</h5>
+      <div class="chart-container area">
+        <canvas id="jugadoresChart"></canvas>
+      </div>
     </div>
   </div>
 
 </div>
-

@@ -1,72 +1,64 @@
-<div class="login-page d-flex align-items-center justify-content-center">
-  <div class="login-box card shadow-sm p-4">
+<div class="login-page">
+  <div class="login-box">
 
-    <h2 class="text-center mb-3">
-      <b>Iniciar sesion</b>
-    </h2>
-
-    <p class="text-center text-muted mb-4">
-      Ingresa tus datos
-    </p>
+    <!-- Logo / Title -->
+    <div class="login-header">
+      <h2>Bienvenido</h2>
+      <p>Inicia sesión para continuar</p>
+    </div>
 
     <form>
-      <!-- Email -->
-      <div class="input-group mb-3">
-        <input
-          type="text" [(ngModel)]="username"
-          class="form-control" id="username" name="username"
-          placeholder="Username"
-        />
-        <span class="input-group-text">
-          <i class="fas fa-envelope"></i>
-        </span>
+      <!-- Username -->
+      <div class="form-group">
+        <label>Usuario</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="text"
+            [(ngModel)]="username"
+            id="username"
+            name="username"
+            placeholder="Ingresa tu usuario"
+          />
+        </div>
       </div>
 
       <!-- Password -->
-      <div class="input-group mb-3">
-        <input
-          type="password" [(ngModel)]="password"
-          class="form-control" id="password"  name="password"
-          placeholder="Password"
-        />
-        <span class="input-group-text">
-          <i class="fas fa-lock"></i>
-        </span>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            id="password"
+            name="password"
+            placeholder="Ingresa tu contraseña"
+          />
+        </div>
       </div>
 
       <!-- Remember -->
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="remember">
-          <label class="form-check-label" for="remember">
-            Recuerdame
-          </label>
-        </div>
+      <div class="login-options">
+        <label class="remember">
+          <input type="checkbox" />
+          Recuérdame
+        </label>
 
-        <button class="btn btn-primary px-4" (click)="login()">
-          Iniciar sesion
-        </button>
+        <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
       </div>
+
+      <!-- Button -->
+      <button type="button" class="btn-login" (click)="login()">
+        Iniciar sesión
+      </button>
     </form>
 
-    <!-- Social -->
-    <div class="text-center my-3 text-muted">
-      - OR -
+    <!-- Divider -->
+    <div class="divider">
+      <span>o</span>
     </div>
 
-    <button class="btn btn-primary w-100 mb-2">
-      <i class="fab fa-facebook me-2"></i>
-      Iniciar sesion usando Facebook
-    </button>
-
-    <button class="btn btn-danger w-100 mb-3">
-      <i class="fab fa-google-plus-g me-2"></i>
-      Iniciar sesion usando Google+
-    </button>
-
-    <div class="text-center">
-      <a href="#" class="d-block mb-1">Olvide mi password</a>
     
-    </div>
   </div>
 </div>

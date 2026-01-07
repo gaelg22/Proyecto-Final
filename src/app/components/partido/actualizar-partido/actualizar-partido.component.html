@@ -1,104 +1,99 @@
 <div class="container-fluid mt-4">
-
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md-6">
 
-      <div class="card card-primary">
+      <div class="card shadow-sm rounded-3 border-0">
 
         <!-- Header -->
-        <div class="card-header">
-          <h3 class="card-title">Actualizar Partido</h3>
+        <div class="card-header bg-primary text-white text-center rounded-top">
+          <h5 class="mb-0 fw-semibold">Actualizar Partido</h5>
         </div>
 
         <!-- Form -->
         <form>
-
-          <div class="card-body">
+          <div class="card-body px-4 py-3">
 
             <!-- Fecha -->
-            <div class="form-group mb-3">
-              <label>Fecha</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Fecha</label>
               <input
                 type="date"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.fecha"
                 id="fecha"
-                name="fecha"
-                placeholder="Ingrese la fecha">
+                name="fecha">
             </div>
 
             <!-- Goles Local -->
-            <div class="form-group mb-3">
-              <label>Goles Local</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Goles Local</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.golesLocal"
                 id="golesLocal"
-                name="golesLocal"
-                placeholder="Ingrese los goles del equipo local">
+                name="golesLocal">
             </div>
 
             <!-- Goles Visitante -->
-            <div class="form-group mb-3">
-              <label>Goles Visitante</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Goles Visitante</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.golesVisitante"
                 id="golesVisitante"
-                name="golesVisitante"
-                placeholder="Ingrese los goles del equipo visitante">
+                name="golesVisitante">
             </div>
 
-            <!-- Id Equipo Local -->
-            <div class="form-group mb-3">
-              <label>Id Equipo Local</label>
+            <!-- Equipo Local -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Id Equipo Local</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.equipoLocalId"
                 id="equipoLocalId"
-                name="equipoLocalId"
-                placeholder="Ingrese el Id del equipo local">
+                name="equipoLocalId">
             </div>
 
-            <!-- Id Equipo Visitante -->
-            <div class="form-group mb-3">
-              <label>Id Equipo Visitante</label>
+            <!-- Equipo Visitante -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Id Equipo Visitante</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.equipoVisitanteId"
                 id="equipoVisitanteId"
-                name="equipoVisitanteId"
-                placeholder="Ingrese el Id del equipo visitante">
+                name="equipoVisitanteId">
             </div>
 
-            <!-- Id Liga -->
-            <div class="form-group mb-3">
-              <label>Id Liga</label>
+            <!-- Liga -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Id Liga</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="partido.ligaId"
                 id="ligaId"
-                name="ligaId"
-                placeholder="Ingrese el Id de la liga">
+                name="ligaId">
             </div>
 
-            
           </div>
 
           <!-- Footer -->
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary"
-            (click)="actualizar()">
+          <div class="card-footer bg-light d-flex justify-content-end gap-2 rounded-bottom">
+            <button
+              type="submit"
+              class="btn btn-primary btn-sm px-4"
+              (click)="actualizar()">
               Actualizar
             </button>
 
-            <button type="button" class="btn btn-secondary ms-2"
-            routerLink="/partidos">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm px-4"
+              routerLink="/partidos">
               Cancelar
             </button>
           </div>
@@ -109,5 +104,4 @@
 
     </div>
   </div>
-
 </div>

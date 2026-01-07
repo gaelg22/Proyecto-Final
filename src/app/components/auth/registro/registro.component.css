@@ -1,13 +1,80 @@
+/* Fondo general */
 .login-page {
   min-height: 100vh;
-  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
+/* Tarjeta */
 .login-box {
   width: 360px;
-  border-radius: 4px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.input-group-text {
-  background-color: #f4f6f9;
+/* Título */
+.title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Subtítulo */
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+/* Grupo input */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+/* Icono */
+.input-group i {
+  color: #6c757d;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Input */
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* Botón */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #0069d9;
 }

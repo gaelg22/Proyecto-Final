@@ -9,6 +9,7 @@ import { AuthService } from '../../../services/auth.service';
   selector: 'app-listado-entrenadores',
   standalone: true,
   imports: [RouterModule],
+  styleUrls: ['./listado-entrenadores.component.css'],
   templateUrl: './listado-entrenadores.component.html'
 })
 export class ListadoEntrenadoresComponent {

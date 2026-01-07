@@ -1,8 +1,112 @@
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
+/* =========================
+   CONTENEDOR
+   ========================= */
+.entrenadores-container {
+  padding: 20px;
+  background: #f5f7fb;
+  min-height: 100vh;
 }
 
-.table th {
-  background-color: #f4f6f9;
+/* =========================
+   CARD
+   ========================= */
+.entrenadores-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.entrenadores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.entrenadores-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* =========================
+   TABLA
+   ========================= */
+.entrenadores-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.entrenadores-table th,
+.entrenadores-table td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.entrenadores-table thead {
+  background: #f9fafb;
+}
+
+.entrenadores-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.entrenadores-table tbody tr:hover {
+  background: #f3f4f6;
+}
+
+/* =========================
+   ACCIONES
+   ========================= */
+.entrenadores-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit {
+  background: #f59e0b;
+  color: black;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.btn-edit i,
+.btn-delete i {
+  font-size: 14px;
 }

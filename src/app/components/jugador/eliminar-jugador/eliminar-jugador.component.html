@@ -1,81 +1,81 @@
 <div class="container-fluid mt-4">
-
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md-6">
 
-      <div class="card card-primary">
+      <div class="card shadow-sm rounded-3 border-0">
 
         <!-- Header -->
-        <div class="card-header">
-          <h3 class="card-title">Eliminar Jugador</h3>
+        <div class="card-header bg-primary text-white text-center rounded-top">
+          <h5 class="mb-0 fw-semibold">Eliminar Jugador</h5>
         </div>
 
         <!-- Form -->
         <form>
-
-          <div class="card-body">
+          <div class="card-body px-4 py-3">
 
             <!-- Nombre -->
-            <div class="form-group mb-3">
-              <label>Nombre</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Nombre</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="jugador.nombre"
                 id="nombre"
                 name="nombre"
-                placeholder="Ingrese el nombre">
-                <div id="nombreHelp" class="form-text">
-                No debe quedar el campo vacio.
-      </div>
+                aria-describedby="nombreHelp">
+
+              <div id="nombreHelp" class="form-text">
+                No debe quedar el campo vacío.
+              </div>
             </div>
 
-            <!-- Ciudad -->
-            <div class="form-group mb-3">
-              <label>Pocision</label>
+            <!-- Posición -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Posición</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="jugador.pocision"
                 id="pocision"
-                name="pocision"
-                placeholder="Ingrese la posicion"> 
+                name="pocision">
             </div>
 
-            <!-- Numero --> 
-            <div class="form-group mb-3">
-              <label>Numero</label>
+            <!-- Número -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Número</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="jugador.numero"
                 id="numero"
-                name="numero"
-                placeholder="Ingrese el numero">
+                name="numero">
             </div>
 
             <!-- Equipo -->
-            <div class="form-group mb-3">
-              <label>Id Equipo</label>
+            <div class="mb-3">
+              <label class="form-label fw-semibold text-muted">Id Equipo</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control form-control-sm"
                 [(ngModel)]="jugador.equipoId"
                 id="equipoId"
-                name="equipoId"
-                placeholder="Ingrese el ID del equipo">
+                name="equipoId">
             </div>
 
           </div>
 
           <!-- Footer -->
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary"
+          <div class="card-footer bg-light d-flex justify-content-end gap-2 rounded-bottom">
+            <button
+              type="submit"
+              class="btn btn-primary btn-sm px-4"
               (click)="eliminar()">
               Eliminar
             </button>
 
-            <button type="button" class="btn btn-secondary ms-2"
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm px-4"
               routerLink="/jugadores">
               Cancelar
             </button>
@@ -87,5 +87,4 @@
 
     </div>
   </div>
-
 </div>

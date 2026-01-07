@@ -1,16 +1,56 @@
-.card {
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  padding: 20px;
-  background: #ffffff;
+.stats-layout {
+  margin-top: 20px;
 }
 
-.card h5 {
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #343a40;
+.stats-card {
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.stats-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* COLORES */
+.stats-card.blue {
+  background: linear-gradient(135deg, #e0f2ff, #f7fbff);
+}
+
+.stats-card.purple {
+  background: linear-gradient(135deg, #f3e8ff, #faf5ff);
+}
+
+.stats-card.green {
+  background: linear-gradient(135deg, #e6fff4, #f5fffb);
+}
+
+/* CONTENEDOR DE GRÁFICA */
+.chart-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+}
+
+.chart-container.horizontal {
+  height: 280px;
+}
+
+.chart-container.donut {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-container.area {
+  height: 360px;
 }
 
 canvas {
-  max-height: 320px;
+  width: 100% !important;
+  height: 100% !important;
 }

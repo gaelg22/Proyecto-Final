@@ -1,39 +1,126 @@
+/* =========================
+   FUENTE GLOBAL (Dashboard)
+   ========================= */
+* {
+  font-family:
+    'Inter',
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
 .sidebar {
-  width: 240px;
-  height: 100vh;
-  background-color: #0f172a;
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
+  width: 240px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px 0;
 }
 
-.logo {
-  text-align: center;
-  margin-bottom: 30px;
+/* =========================
+   LOGO
+   ========================= */
+.sidebar .logo {
+  display: flex;
+  align-items: center;
   font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #111827;
+  padding: 0 24px;
+  margin-bottom: 30px;
 }
 
-ul {
+.sidebar .logo i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #2563eb;
+}
+
+/* =========================
+   LISTA
+   ========================= */
+.sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-li {
-  margin: 12px 0;
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 16px 0;
 }
 
-a {
-  display: block;
-  padding: 10px;
-  color: #e5e7eb;
+/* =========================
+   ITEMS
+   ========================= */
+.sidebar ul li {
+  margin-bottom: 4px;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 0 12px;
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #6b7280;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-a:hover,
-a.active {
+/* Iconos */
+.sidebar ul li a i {
+  width: 20px;
+  margin-right: 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Hover */
+.sidebar ul li a:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* Activo (routerLinkActive) */
+.sidebar ul li a.active {
   background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
 }
 
+.sidebar ul li a.active i {
+  color: #ffffff;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+.main-content {
+  margin-left: 240px;
+  padding: 24px;
+}
+
+/* FIX Font Awesome 6 en Angular */
+.sidebar i {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
