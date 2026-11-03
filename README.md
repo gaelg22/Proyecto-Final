@@ -1,60 +1,24 @@
-# AdminlteAngular
+# Ligas deportivas — frontend en Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Frontend del proyecto final de la materia (UPIIZ-IPN). Consume la [API de ligas deportivas](https://github.com/gaelg22/Ejercicio-10) hecha en Spring Boot.
 
-## Development server
+## Stack
 
-To start a local development server, run:
+Angular 19 (componentes standalone) · TypeScript · Bootstrap 5 + AdminLTE · Chart.js
 
-```bash
-ng serve
-```
+## Qué tiene
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Login y registro** contra la API. El token JWT se guarda y un **interceptor** lo manda en cada petición.
+- **Guard** de rutas: cualquiera puede ver los listados, pero agregar, editar y eliminar requieren sesión.
+- CRUD completo de **ligas, equipos, jugadores, entrenadores y partidos** (listado, agregar, actualizar y eliminar para cada uno).
+- Página de **estadísticas** con gráficas en Chart.js.
+- Rutas con *lazy loading* (`loadComponent`).
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Correrlo
 
 ```bash
-ng generate --help
+npm install
+ng serve      # http://localhost:4200
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-"# adminlte-angular" 
+La URL de la API está en los servicios de `src/app/services/`.
